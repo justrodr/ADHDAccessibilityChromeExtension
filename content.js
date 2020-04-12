@@ -10,7 +10,7 @@ console.log("Boom Awesome?");
 
 let body = document.getElementsByTagName('body');
 for (elt of body) {
-    console.log(elt);
+    console.log(elt.textContent);
     elt.style['background-color'] = '#FF00FF';
 }
 
@@ -29,7 +29,7 @@ for (elt of audio) {
 
 let paragraphs = document.getElementsByTagName('p');
 for (elt of paragraphs) {
-    console.log(elt);
+    console.log(elt.textContent);
     elt.style['background-color'] = '#FF00FF';
 }
 
@@ -57,3 +57,7 @@ let YahooNewsAds = document.getElementsByClassName('YDC-Sidekick-Wrapper');
 for (elt of YahooNewsAds) {
     elt.style['opacity'] = '0.0';
 }
+
+// This line below erases all of the HTML
+// This will come in handy later so we can do this cleanly
+// document.documentElement.innerHTML = '';
