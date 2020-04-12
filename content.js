@@ -19,12 +19,12 @@ let audio = document.querySelectorAll("audio");
 
 for (elt of video) {
     elt.pause();
-    elt.mute();
+    elt.muted = true;
 }
 
 for (elt of audio) {
     elt.pause();
-    elt.mute();
+    elt.muted = true;
 }
 
 let paragraphs = document.getElementsByTagName('p');
