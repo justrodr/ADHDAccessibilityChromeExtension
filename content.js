@@ -17,6 +17,16 @@ for (elt of body) {
 let video = document.querySelectorAll("video");
 let audio = document.querySelectorAll("audio");
 
+for (elt of video) {
+    elt.pause();
+    elt.mute();
+}
+
+for (elt of audio) {
+    elt.pause();
+    elt.mute();
+}
+
 let paragraphs = document.getElementsByTagName('p');
 for (elt of paragraphs) {
     console.log(elt);
