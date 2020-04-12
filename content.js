@@ -6,10 +6,21 @@ console.log("Boom Awesome?");
 //     elt.style['font-size'] = '20pt';
 // }
 
+
+
 let body = document.getElementsByTagName('body');
 for (elt of body) {
     console.log(elt);
-    elt.style['background-color'] = '#FFFFFF';
+    elt.style['background-color'] = '#FF00FF';
+}
+
+let video = document.querySelectorAll("video");
+let audio = document.querySelectorAll("audio");
+
+let paragraphs = document.getElementsByTagName('p');
+for (elt of paragraphs) {
+    console.log(elt);
+    elt.style['background-color'] = '#FF00FF';
 }
 
 let ads = document.getElementsByClassName('adsbygoogle');
