@@ -1,19 +1,3 @@
-console.log("Boom Awesome?");
-
-// let paragraphs = document.getElementsByTagName('p');
-// for (elt of paragraphs) {
-//     console.log(elt);
-//     elt.style['font-size'] = '20pt';
-// }
-
-
-
-let body = document.getElementsByTagName('body');
-for (elt of body) {
-    console.log("BODY: " + elt.textContent);
-    elt.style['background-color'] = '#FF00FF';
-}
-
 let video = document.querySelectorAll("video");
 let audio = document.querySelectorAll("audio");
 
@@ -27,37 +11,45 @@ for (elt of audio) {
     elt.muted = true;
 }
 
-let paragraphs = document.getElementsByTagName('p');
-for (elt of paragraphs) {
-    console.log("PARAGRAPH: " + elt.textContent);
-    elt.style['background-color'] = '#FF00FF';
+let leftSideBarElts = document.getElementsByClassName('leftSideBarParent');
+for (elt of leftSideBarElts ) {
+    elt.style['display'] = "none";
 }
 
-let ads = document.getElementsByClassName('adsbygoogle');
-for (elt of ads) {
-    elt.style['opacity'] = '0.0';
+let rightSideBarElts = document.getElementsByClassName('rightSideBarParent');
+for (elt of rightSideBarElts ) {
+    elt.style['display'] = "none";
 }
 
-let adwrappers = document.getElementsByClassName('ad_wrapper_');
-for (elt of adwrappers) {
-    elt.style['opacity'] = '0.0';
-}
+let widgets = document.getElementsByClassName('widget-area');
+for (elt of widgets) {
+    elt.style['display'] = "none";
+} 
 
-let right_rail = document.getElementsByClassName('right-rail');
-for (elt of right_rail) {
-    elt.style['opacity'] = '0.0';
-}
+let documentData = document.getElementsByClassName('site-content');
 
-let advertisement = document.getElementsByClassName('advertisement');
-for (elt of advertisement) {
-    elt.style['opacity'] = '0.0';
-}
+for (elt of documentData) {
+    elt.style['float'] = "none";
+    elt.style['margin-left'] = "auto";
+    elt.style['margin-right'] = "auto";
+} 
 
-let YahooNewsAds = document.getElementsByClassName('YDC-Sidekick-Wrapper');
-for (elt of YahooNewsAds) {
-    elt.style['opacity'] = '0.0';
-}
+let centerAds = document.getElementsByClassName('ad-container');
 
-// This line below erases all of the HTML
-// This will come in handy later so we can do this cleanly
-// document.documentElement.innerHTML = '';
+for (elt of centerAds) {
+    elt.style['background-color'] = "#00FF00";
+} 
+
+let centerAds2 = document.getElementsByClassName('_ap_apex_ad');
+
+for (elt of centerAds2) {
+    elt.style['display'] = "none";
+} 
+
+let links = document.getElementsByTagName('a');
+
+for (elt of links) {
+    elt.style['text-decoration'] = "underline";
+} 
+
+
